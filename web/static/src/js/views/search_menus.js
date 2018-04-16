@@ -1,4 +1,4 @@
-hexya.define('web.FavoriteMenu', function (require) {
+doxa.define('web.FavoriteMenu', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -269,7 +269,7 @@ return Widget.extend({
 
 });
 
-hexya.define('web.FilterMenu', function (require) {
+doxa.define('web.FilterMenu', function (require) {
 "use strict";
 
 var data_manager = require('web.data_manager');
@@ -390,7 +390,7 @@ return Widget.extend({
 
 });
 
-hexya.define('web.GroupByMenu', function (require) {
+doxa.define('web.GroupByMenu', function (require) {
 "use strict";
 
 var core = require('web.core');

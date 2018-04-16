@@ -6,9 +6,9 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/server"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/server"
 )
 
 type loginData struct {

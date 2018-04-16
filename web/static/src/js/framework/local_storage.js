@@ -1,4 +1,4 @@
-hexya.define('web.local_storage', function (require) {
+doxa.define('web.local_storage', function (require) {
 'use strict';
 
 var Class = require('web.Class');

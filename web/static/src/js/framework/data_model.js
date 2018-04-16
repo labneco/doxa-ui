@@ -1,4 +1,4 @@
-hexya.define('web.DataModel', function (require) {
+doxa.define('web.DataModel', function (require) {
 "use strict";
 
 var data = require('web.data');
@@ -37,7 +37,7 @@ Model.include({
         return new data.CompoundContext(session.user_context, this._context, context || {});
     },
     /**
-     * Call a method (over RPC) on the bound Hexya model.
+     * Call a method (over RPC) on the bound Doxa model.
      *
      * @param {String} method name of the method to call
      * @param {Array} [args] positional arguments

@@ -1,7 +1,7 @@
-hexya.define('web.GraphView', function (require) {
+doxa.define('web.GraphView', function (require) {
 "use strict";
 /*---------------------------------------------------------
- * Hexya Graph view
+ * Doxa Graph view
  *---------------------------------------------------------*/
 
 var core = require('web.core');

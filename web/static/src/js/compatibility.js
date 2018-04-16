@@ -1,13 +1,13 @@
 // ------------------------------------------------------------------------------
-// Compatibility with Hexya v8.
+// Compatibility with Doxa v8.
 // 
 // With the new module system, no global variable can (and should) be accessed
-// in hexyaerp.  This file exports everything, to mimic the previous global
+// in doxaerp.  This file exports everything, to mimic the previous global
 // namespace structure.  This is only supposed to be used by 3rd parties to 
-// facilitate migration.  Hexya addons should not use the 'hexyaerp' variable at
+// facilitate migration.  Doxa addons should not use the 'doxaerp' variable at
 // all.
 // ------------------------------------------------------------------------------
-hexya.define('web.compatibility', function (require) {
+doxa.define('web.compatibility', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');
@@ -47,86 +47,86 @@ var OldRegistry = Registry.extend({
     },
 });
 
-window.hexyaerp = window.hexyaerp || {};
+window.doxaerp = window.doxaerp || {};
 
 $.Mutex = utils.Mutex;
-hexyaerp._session_id = "instance0";
-hexyaerp._t = core._t;
-hexyaerp.get_cookie = utils.get_cookie;
+doxaerp._session_id = "instance0";
+doxaerp._t = core._t;
+doxaerp.get_cookie = utils.get_cookie;
 
-hexyaerp.qweb = core.qweb;
-hexyaerp.session = session;
+doxaerp.qweb = core.qweb;
+doxaerp.session = session;
 
-hexyaerp.web = hexyaerp.web || {};
-hexyaerp.web._t = core._t;
-hexyaerp.web._lt = core._lt;
+doxaerp.web = doxaerp.web || {};
+doxaerp.web._t = core._t;
+doxaerp.web._lt = core._lt;
 
-hexyaerp.web.ActionManager = ActionManager;
-hexyaerp.web.auto_str_to_date = time.auto_str_to_date;
-hexyaerp.web.blockUI = framework.blockUI;
-hexyaerp.web.BufferedDataSet = data.BufferedDataSet;
-hexyaerp.web.bus = core.bus;
-hexyaerp.web.Class = core.Class;
-hexyaerp.web.client_actions = make_old_registry(core.action_registry);
-hexyaerp.web.CompoundContext = data.CompoundContext;
-hexyaerp.web.CompoundDomain = data.CompoundDomain;
-hexyaerp.web.DataSetSearch = data.DataSetSearch;
-hexyaerp.web.DataSet = data.DataSet;
-hexyaerp.web.date_to_str = time.date_to_str;
-hexyaerp.web.Dialog = Dialog;
-hexyaerp.web.DropMisordered = utils.DropMisordered;
+doxaerp.web.ActionManager = ActionManager;
+doxaerp.web.auto_str_to_date = time.auto_str_to_date;
+doxaerp.web.blockUI = framework.blockUI;
+doxaerp.web.BufferedDataSet = data.BufferedDataSet;
+doxaerp.web.bus = core.bus;
+doxaerp.web.Class = core.Class;
+doxaerp.web.client_actions = make_old_registry(core.action_registry);
+doxaerp.web.CompoundContext = data.CompoundContext;
+doxaerp.web.CompoundDomain = data.CompoundDomain;
+doxaerp.web.DataSetSearch = data.DataSetSearch;
+doxaerp.web.DataSet = data.DataSet;
+doxaerp.web.date_to_str = time.date_to_str;
+doxaerp.web.Dialog = Dialog;
+doxaerp.web.DropMisordered = utils.DropMisordered;
 
-hexyaerp.web.form = hexyaerp.web.form || {};
-hexyaerp.web.form.AbstractField = form_common.AbstractField;
-hexyaerp.web.form.compute_domain = data.compute_domain;
-hexyaerp.web.form.DefaultFieldManager = form_common.DefaultFieldManager;
-hexyaerp.web.form.FieldChar = core.form_widget_registry.get('char');
-hexyaerp.web.form.FieldFloat = core.form_widget_registry.get('float');
-hexyaerp.web.form.FieldStatus = core.form_widget_registry.get('statusbar');
-hexyaerp.web.form.FieldMany2ManyTags = core.form_widget_registry.get('many2many_tags');
-hexyaerp.web.form.FieldMany2One = core.form_widget_registry.get('many2one');
-hexyaerp.web.form.FormWidget = form_common.FormWidget;
-hexyaerp.web.form.tags = make_old_registry(core.form_tag_registry);
-hexyaerp.web.form.widgets = make_old_registry(core.form_widget_registry);
-hexyaerp.web.form.custom_widgets = make_old_registry(core.form_custom_registry);
+doxaerp.web.form = doxaerp.web.form || {};
+doxaerp.web.form.AbstractField = form_common.AbstractField;
+doxaerp.web.form.compute_domain = data.compute_domain;
+doxaerp.web.form.DefaultFieldManager = form_common.DefaultFieldManager;
+doxaerp.web.form.FieldChar = core.form_widget_registry.get('char');
+doxaerp.web.form.FieldFloat = core.form_widget_registry.get('float');
+doxaerp.web.form.FieldStatus = core.form_widget_registry.get('statusbar');
+doxaerp.web.form.FieldMany2ManyTags = core.form_widget_registry.get('many2many_tags');
+doxaerp.web.form.FieldMany2One = core.form_widget_registry.get('many2one');
+doxaerp.web.form.FormWidget = form_common.FormWidget;
+doxaerp.web.form.tags = make_old_registry(core.form_tag_registry);
+doxaerp.web.form.widgets = make_old_registry(core.form_widget_registry);
+doxaerp.web.form.custom_widgets = make_old_registry(core.form_custom_registry);
 
-hexyaerp.web.format_value = formats.format_value;
-hexyaerp.web.FormView = FormView;
+doxaerp.web.format_value = formats.format_value;
+doxaerp.web.FormView = FormView;
 
-hexyaerp.web.json_node_to_xml = utils.json_node_to_xml;
+doxaerp.web.json_node_to_xml = utils.json_node_to_xml;
 
-hexyaerp.web.ListView = ListView;
-hexyaerp.web.Model = Model;
-hexyaerp.web.normalize_format = time.strftime_to_moment_format;
-hexyaerp.web.py_eval = pyeval.py_eval;
-hexyaerp.web.pyeval = pyeval;
-hexyaerp.web.qweb = core.qweb;
+doxaerp.web.ListView = ListView;
+doxaerp.web.Model = Model;
+doxaerp.web.normalize_format = time.strftime_to_moment_format;
+doxaerp.web.py_eval = pyeval.py_eval;
+doxaerp.web.pyeval = pyeval;
+doxaerp.web.qweb = core.qweb;
 
-hexyaerp.web.Registry = OldRegistry;
+doxaerp.web.Registry = OldRegistry;
 
-hexyaerp.web.search = {};
-hexyaerp.web.search.FavoriteMenu = FavoriteMenu;
-hexyaerp.web.SearchView = SearchView;
-hexyaerp.web.Sidebar = Sidebar;
-hexyaerp.web.str_to_date = time.str_to_date;
-hexyaerp.web.str_to_datetime = time.str_to_datetime;
-hexyaerp.web.SystrayItems = SystrayMenu.Items;
-hexyaerp.web.unblockUI = framework.unblockUI;
-hexyaerp.web.UserMenu = UserMenu;
-hexyaerp.web.View = View;
-hexyaerp.web.ViewManager = ViewManager;
-hexyaerp.web.views = make_old_registry(core.view_registry);
-hexyaerp.web.WebClient = WebClient;
-hexyaerp.web.Widget = Widget;
+doxaerp.web.search = {};
+doxaerp.web.search.FavoriteMenu = FavoriteMenu;
+doxaerp.web.SearchView = SearchView;
+doxaerp.web.Sidebar = Sidebar;
+doxaerp.web.str_to_date = time.str_to_date;
+doxaerp.web.str_to_datetime = time.str_to_datetime;
+doxaerp.web.SystrayItems = SystrayMenu.Items;
+doxaerp.web.unblockUI = framework.unblockUI;
+doxaerp.web.UserMenu = UserMenu;
+doxaerp.web.View = View;
+doxaerp.web.ViewManager = ViewManager;
+doxaerp.web.views = make_old_registry(core.view_registry);
+doxaerp.web.WebClient = WebClient;
+doxaerp.web.Widget = Widget;
 
-hexyaerp.Widget = hexyaerp.web.Widget;
-hexyaerp.Widget.prototype.session = session;
+doxaerp.Widget = doxaerp.web.Widget;
+doxaerp.Widget.prototype.session = session;
 
 
 WebClient.include({
     init: function () {
-        hexyaerp.client = this;
-        hexyaerp.webclient = this;
+        doxaerp.client = this;
+        doxaerp.webclient = this;
         start_modules();
         client_started.resolve();
         this._super.apply(this, arguments);
@@ -144,7 +144,7 @@ function make_old_registry(registry) {
     };
 }
 function get_object(path) {
-    var object_match = hexyaerp;
+    var object_match = doxaerp;
     path = path.split('.');
     // ignore first section
     for(var i=1; i<path.length; ++i) {
@@ -154,32 +154,32 @@ function get_object(path) {
 }
 
 /**
- * Hexya instance constructor
+ * Doxa instance constructor
  *
  * @param {Array|String} modules list of modules to initialize
  */
 var inited = false;
 function start_modules (modules) {
     if (modules === undefined) {
-        modules = hexya._modules;
+        modules = doxa._modules;
     }
     modules = _.without(modules, "web");
     if (inited) {
-        throw new Error("Hexya was already inited");
+        throw new Error("Doxa was already inited");
     }
     inited = true;
     for(var i=0; i < modules.length; i++) {
-        var fct = hexyaerp[modules[i]];
+        var fct = doxaerp[modules[i]];
         if (typeof(fct) === "function") {
-            hexyaerp[modules[i]] = {};
+            doxaerp[modules[i]] = {};
             for (var k in fct) {
-                hexyaerp[modules[i]][k] = fct[k];
+                doxaerp[modules[i]][k] = fct[k];
             }
-            fct(hexyaerp, hexyaerp[modules[i]]);
+            fct(doxaerp, doxaerp[modules[i]]);
         }
     }
-    hexyaerp._modules = ['web'].concat(modules);
-    return hexyaerp;
+    doxaerp._modules = ['web'].concat(modules);
+    return doxaerp;
 };
 
 // Monkey-patching of the ListView for backward compatibiliy of the colors and

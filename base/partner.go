@@ -18,19 +18,19 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/hexya-erp/hexya-base/base/basetypes"
-	"github.com/hexya-erp/hexya/hexya/actions"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/fieldtype"
-	"github.com/hexya-erp/hexya/hexya/models/operator"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/tools/b64image"
-	"github.com/hexya-erp/hexya/hexya/tools/generate"
-	"github.com/hexya-erp/hexya/hexya/tools/typesutils"
-	"github.com/hexya-erp/hexya/hexya/views"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa-ui/base/basetypes"
+	"github.com/labneco/doxa/doxa/actions"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/fieldtype"
+	"github.com/labneco/doxa/doxa/models/operator"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/tools/b64image"
+	"github.com/labneco/doxa/doxa/tools/generate"
+	"github.com/labneco/doxa/doxa/tools/typesutils"
+	"github.com/labneco/doxa/doxa/views"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 )
 
 const gravatarBaseURL = "https://www.gravatar.com/avatar"
@@ -310,7 +310,7 @@ Use this field anywhere a small image is required.`},
 					imgFileName = "avatar.png"
 					colorize = true
 				}
-				path := filepath.Join(generate.HexyaDir, "hexya", "server", "static", "base", "img", imgFileName)
+				path := filepath.Join(generate.DoxaDir, "doxa", "server", "static", "base", "img", imgFileName)
 				content, err := ioutil.ReadFile(path)
 				if err != nil {
 					log.Warn("Missing ressource", "image", path)
@@ -494,7 +494,7 @@ Use this field anywhere a small image is required.`},
 			}
 			partnerData.CommercialPartner = rs.CommercialPartner()
 			fieldsToUnset = append(fieldsToUnset, h.Partner().CommercialPartner())
-			return syncChildren.WithContext("hexya_force_compute_write", true).Write(partnerData, fieldsToUnset...)
+			return syncChildren.WithContext("doxa_force_compute_write", true).Write(partnerData, fieldsToUnset...)
 		})
 
 	partnerModel.Methods().FieldsSync().DeclareMethod(

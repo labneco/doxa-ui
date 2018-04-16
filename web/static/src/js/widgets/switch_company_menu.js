@@ -1,4 +1,4 @@
-hexya.define('web.SwitchCompanyMenu', function(require) {
+doxa.define('web.SwitchCompanyMenu', function(require) {
 "use strict";
 
 var Model = require('web.Model');

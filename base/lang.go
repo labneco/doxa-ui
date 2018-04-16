@@ -4,9 +4,9 @@
 package base
 
 import (
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/pool/h"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/pool/h"
 )
 
 func init() {

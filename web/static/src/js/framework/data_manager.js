@@ -1,4 +1,4 @@
-hexya.define('web.DataManager', function (require) {
+doxa.define('web.DataManager', function (require) {
 "use strict";
 
 var core = require('web.core');

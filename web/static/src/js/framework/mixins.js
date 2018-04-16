@@ -1,4 +1,4 @@
-hexya.define('web.mixins', function (require) {
+doxa.define('web.mixins', function (require) {
 "use strict";
 
 var Class = require('web.Class');
@@ -114,7 +114,7 @@ var ParentedMixin = {
     },
 };
 
-function HexyaEvent (target, name, data) {
+function DoxaEvent (target, name, data) {
     this.target = target;
     this.name = name;
     this.data = Object.create(null);
@@ -122,11 +122,11 @@ function HexyaEvent (target, name, data) {
     this.stopped = false;
 }
 
-HexyaEvent.prototype.stop_propagation = function () {
+DoxaEvent.prototype.stop_propagation = function () {
     this.stopped = true;
 };
 
-HexyaEvent.prototype.is_stopped = function () {
+DoxaEvent.prototype.is_stopped = function () {
     return this.stopped;
 };
 
@@ -284,7 +284,7 @@ var EventDispatcherMixin = _.extend({}, ParentedMixin, {
         return this;
     },
     trigger_up: function(name, info) {
-        var event = new HexyaEvent(this, name, info);
+        var event = new DoxaEvent(this, name, info);
         this._trigger_up(event);
     },
     _trigger_up: function(event) {

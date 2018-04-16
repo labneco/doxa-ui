@@ -1,7 +1,7 @@
-hexya.define('web.TreeView', function (require) {
+doxa.define('web.TreeView', function (require) {
 "use strict";
 /*---------------------------------------------------------
- * Hexya Tree view
+ * Doxa Tree view
  *---------------------------------------------------------*/
 
 var core = require('web.core');

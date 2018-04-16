@@ -1,7 +1,7 @@
-hexya.define('web.ListEditor', function (require) {
+doxa.define('web.ListEditor', function (require) {
 "use strict";    
 /*---------------------------------------------------------
- * Hexya Editable List view
+ * Doxa Editable List view
  *---------------------------------------------------------*/
 /**
  * handles editability case for lists, because it depends on form and forms already depends on lists it had to be split out

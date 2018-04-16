@@ -25,13 +25,13 @@
 
             .o-align-items(baseline);
             min-width: 50px;
-            margin: 0 -@hexya-form-spacing-unit/2;
+            margin: 0 -@doxa-form-spacing-unit/2;
 
             > div, > span, > button, > label, > a, > input { // > * did not add a level of priority to the rule
                 .o-flex(0, 0, auto);
                 width: auto!important;
-                margin-right: @hexya-form-spacing-unit/2;
-                margin-left: @hexya-form-spacing-unit/2;
+                margin-right: @doxa-form-spacing-unit/2;
+                margin-left: @doxa-form-spacing-unit/2;
             }
 
             > .o_row {
@@ -48,7 +48,7 @@
 
         .o_row .o_form_field_many2one, .o_form_field_many2one.oe_inline {
             &.o_with_button:not(:last-child) { // If invisible element as last child, this line has no effect but that's not very important
-                margin-right: (35px + (@hexya-form-spacing-unit/2));
+                margin-right: (35px + (@doxa-form-spacing-unit/2));
             }
         }
     }
@@ -84,7 +84,7 @@
         }
 
         .oe_title {
-            max-width: @container-sm - (2 * @hexya-horizontal-padding);
+            max-width: @container-sm - (2 * @doxa-horizontal-padding);
         }
     }
 
@@ -105,7 +105,7 @@
         margin: 10px 0;
 
         // o_group contains nested groups
-        .o-generate-groups(@hexya-form-group-cols);
+        .o-generate-groups(@doxa-form-group-cols);
         .o-generate-groups(@n, @i: 1) when (@i =< @n) {
             .o_group_col_@{i} {
                 display: inline-block;
@@ -147,7 +147,7 @@
     // Notebooks
     .o_notebook {
         clear: both; // For the notebook not to have alongside floating elements
-        margin-top: @hexya-form-spacing-unit * 2;
+        margin-top: @doxa-form-spacing-unit * 2;
     }
 
     // Labels
@@ -158,7 +158,7 @@
     // Form fields
     .o_form_field {
         display: inline-block;
-        margin-bottom: @hexya-form-spacing-unit;
+        margin-bottom: @doxa-form-spacing-unit;
     }
 
     // Block fields
@@ -213,7 +213,7 @@
 
             > input {
                 .o-flex(0, 0, auto);
-                margin: 0 @hexya-form-spacing-unit 0 0;
+                margin: 0 @doxa-form-spacing-unit 0 0;
             }
             > label {
                 margin: 0;
@@ -222,14 +222,14 @@
 
         &.o_horizontal {
             .o_radio_item {
-                margin-right: @hexya-form-spacing-unit * 2;
+                margin-right: @doxa-form-spacing-unit * 2;
             }
         }
 
         &.o_vertical {
             .o-flex-flow(column, nowrap);
             .o_radio_item {
-                margin-bottom: @hexya-form-spacing-unit;
+                margin-bottom: @doxa-form-spacing-unit;
             }
         }
     }

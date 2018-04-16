@@ -1,4 +1,4 @@
-hexya.define('web.Pager', function (require) {
+doxa.define('web.Pager', function (require) {
 "use strict";
 
 var utils = require('web.utils');

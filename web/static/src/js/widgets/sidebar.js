@@ -1,4 +1,4 @@
-hexya.define('web.Sidebar', function (require) {
+doxa.define('web.Sidebar', function (require) {
 "use strict";
 
 var core = require('web.core');

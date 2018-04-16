@@ -1,4 +1,4 @@
-hexya.define('web.data', function (require) {
+doxa.define('web.data', function (require) {
 "use strict";
 
 var Class = require('web.Class');
@@ -13,7 +13,7 @@ var _t = translation._t;
 
 /**
  * Serializes the sort criterion array of a dataset into a form which can be
- * consumed by Hexya's RPC APIs.
+ * consumed by Doxa's RPC APIs.
  *
  * @param {Array} criterion array of fields, from first to last criteria, prefixed with '-' for reverse sorting
  * @returns {String} SQL-like sorting string (``ORDER BY``) clause
@@ -136,7 +136,7 @@ var Query = Class.extend({
      * Performs a groups read according to the provided grouping criterion
      *
      * @param {String|Array<String>} grouping
-     * @returns {jQuery.Deferred<Array<hexyaerp.web.QueryGroup>> | null}
+     * @returns {jQuery.Deferred<Array<doxaerp.web.QueryGroup>> | null}
      */
     group_by: function (grouping) {
         var ctx = pyeval.eval(
@@ -184,7 +184,7 @@ var Query = Class.extend({
      * the new context.
      *
      * @param context context data to add to the query
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     context: function (context) {
         if (!context) { return this; }
@@ -195,7 +195,7 @@ var Query = Class.extend({
      * the new domain.
      *
      * @param domain domain data to AND with the current query filter
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     filter: function (domain) {
         if (!domain) { return this; }
@@ -208,7 +208,7 @@ var Query = Class.extend({
      * @param {Boolean} lazy indicates if the read_group should return only the
      * first level of groupby records, or should return the records grouped by
      * all levels at once (so, it makes only 1 db request).
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     lazy: function (lazy) {
         return this.clone({lazy: lazy});
@@ -218,7 +218,7 @@ var Query = Class.extend({
      * query's own limit
      *
      * @param {Number} limit maximum number of records the query should retrieve
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     limit: function (limit) {
         return this.clone({limit: limit});
@@ -228,7 +228,7 @@ var Query = Class.extend({
      * query's own offset
      *
      * @param {Number} offset number of records the query should skip before starting its retrieval
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     offset: function (offset) {
         return this.clone({offset: offset});
@@ -238,7 +238,7 @@ var Query = Class.extend({
      * those of the current query
      *
      * @param {String...} fields ordering clauses
-     * @returns {hexyaerp.web.Query}
+     * @returns {doxaerp.web.Query}
      */
     order_by: function (fields) {
         if (fields === undefined) { return this; }
@@ -307,11 +307,11 @@ var QueryGroup = Class.extend({
 
 var DataSet =  Class.extend(mixins.PropertiesMixin, {
     /**
-     * Collection of Hexya records, used to share records and the current selection between views.
+     * Collection of Doxa records, used to share records and the current selection between views.
      *
      * @constructs instance.web.DataSet
      *
-     * @param {String} model the Hexya model this dataset will manage
+     * @param {String} model the Doxa model this dataset will manage
      */
     init: function(parent, model, context) {
         mixins.PropertiesMixin.init.call(this);
@@ -352,8 +352,8 @@ var DataSet =  Class.extend(mixins.PropertiesMixin, {
     get_id_index: function(id) {
         for (var i=0, ii=this.ids.length; i<ii; i++) {
             // Here we use type coercion because of the mess potentially caused by
-            // Hexya ids fetched from the DOM as string. (eg: dhtmlxcalendar)
-            // Hexya ids can be non-numeric too ! (eg: recursive events in calendar)
+            // Doxa ids fetched from the DOM as string. (eg: dhtmlxcalendar)
+            // Doxa ids can be non-numeric too ! (eg: recursive events in calendar)
             if (id == this.ids[i]) {
                 return i;
             }
@@ -527,7 +527,7 @@ var DataSet =  Class.extend(mixins.PropertiesMixin, {
     /**
      *
      * @param {String} name name to perform a search for/on
-     * @param {Array} [domain=[]] filters for the objects returned, Hexya domain
+     * @param {Array} [domain=[]] filters for the objects returned, Doxa domain
      * @param {String} [operator='ilike'] matching operator to use with the provided name value
      * @param {Number} [limit=0] maximum number of matches to return
      * @param {Function} callback function to call with name_search result
@@ -558,7 +558,7 @@ var DataSet =  Class.extend(mixins.PropertiesMixin, {
      * Reads or changes sort criteria on the dataset.
      *
      * If not provided with any argument, serializes the sort criteria to
-     * an SQL-like form usable by Hexya's ORM.
+     * an SQL-like form usable by Doxa's ORM.
      *
      * If given a field, will set that field as first sorting criteria or,
      * if the field is already the first sorting criteria, will reverse it.
@@ -583,7 +583,7 @@ var DataSet =  Class.extend(mixins.PropertiesMixin, {
      * Set the sort criteria on the dataset.
      *
      * @param {Array} fields_list: list of fields order descriptors, as used by
-     * Hexya's ORM (such as 'name desc', 'product_id', 'order_date asc')
+     * Doxa's ORM (such as 'name desc', 'product_id', 'order_date asc')
      */
     set_sort: function (fields_list) {
         this._sort = deserialize_sort(fields_list);

@@ -1,4 +1,4 @@
-hexya.define('web.form_relational', function (require) {
+doxa.define('web.form_relational', function (require) {
 "use strict";
 
 var ControlPanel = require('web.ControlPanel');
@@ -421,7 +421,7 @@ var FieldMany2One = common.AbstractField.extend(common.CompletionFieldMixin, com
  * A Abstract field for one2many and many2many field
  * For all fields on2many or many2many:
  *  - this.get('value') contains a list of ids and virtual ids
- *  - get_value() return an hexya write command list
+ *  - get_value() return an doxa write command list
  */
 var AbstractManyField = common.AbstractField.extend({
     init: function(field_manager, node) {

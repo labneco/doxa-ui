@@ -1,8 +1,8 @@
 
-hexya.testing = {};
+doxa.testing = {};
 
-hexya.testing.start_services = function () {
-    var factories = hexya.__DEBUG__.factories;
+doxa.testing.start_services = function () {
+    var factories = doxa.__DEBUG__.factories;
     delete factories['mail.chat_manager'];
     var jobs = _.map(factories, function (factory, name) {
         return {
@@ -12,29 +12,29 @@ hexya.testing.start_services = function () {
         };
     });
     var services = Object.create({});
-  return hexya.process_jobs(jobs, services);
+  return doxa.process_jobs(jobs, services);
 };
 
-hexya.testing.MockRPC = function (session) {
+doxa.testing.MockRPC = function (session) {
     this.clear();
 };
 
-hexya.testing.MockRPC.prototype.clear = function () {
+doxa.testing.MockRPC.prototype.clear = function () {
     this.responses = {};
 };
 
-hexya.testing.MockRPC.prototype.interceptRPC = function (session) {
+doxa.testing.MockRPC.prototype.interceptRPC = function (session) {
     session.rpc = this.rpc.bind(this);
 };
 
-hexya.testing.MockRPC.prototype.add = function (spec, handler, no_override) {
+doxa.testing.MockRPC.prototype.add = function (spec, handler, no_override) {
     if (no_override && (spec in this.responses)) {
         return;
     }
     this.responses[spec] = handler;
 };
 
-hexya.testing.MockRPC.prototype.rpc =  function (url, rparams, options) {
+doxa.testing.MockRPC.prototype.rpc =  function (url, rparams, options) {
     if (_.isString(url)) {
         url = {url: url};
     }
@@ -68,9 +68,9 @@ hexya.testing.MockRPC.prototype.rpc =  function (url, rparams, options) {
     }
 };
 
-hexya.testing.noop = function () {};
+doxa.testing.noop = function () {};
 
-hexya.define_section = function (name, section_deps) {
+doxa.define_section = function (name, section_deps) {
     var section_body, options, mock;
 
     if (typeof arguments[2] === 'function') {
@@ -81,17 +81,17 @@ hexya.define_section = function (name, section_deps) {
         section_body = arguments[3];
     }
 
-    mock = new hexya.testing.MockRPC();
+    mock = new doxa.testing.MockRPC();
 
     function dummyfunc ()  {};
 
     function beforeEach(assert) {
-        var services = hexya.testing.start_services();
+        var services = doxa.testing.start_services();
         this.deps = services;
         this.getServiceDeps = function getServiceDeps(dep_names) {
             return _.map(dep_names, function (name) { return services[name]; })
         }
-        services['web.core'].qweb.add_template(hexya.testing.templates);
+        services['web.core'].qweb.add_template(doxa.testing.templates);
         this.mock = mock;
         this.mock.interceptRPC(services['web.session']);
         this.assert = assert;
@@ -139,7 +139,7 @@ QUnit.log(function(result) {
 });
 
 (new QWeb2.Engine()).load_xml("/web/webclient/qweb", function (err, xDoc) {
-    hexya.testing.templates = xDoc;
+    doxa.testing.templates = xDoc;
     QUnit.start();
 });
 

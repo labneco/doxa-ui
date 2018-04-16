@@ -1,4 +1,4 @@
-hexya.define('web.Menu', function (require) {
+doxa.define('web.Menu', function (require) {
 "use strict";
 
 var core = require('web.core');

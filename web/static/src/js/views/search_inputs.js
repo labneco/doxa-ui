@@ -1,4 +1,4 @@
-hexya.define('web.search_inputs', function (require) {
+doxa.define('web.search_inputs', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -176,7 +176,7 @@ var Field = Input.extend( /** @lends instance.web.search.Field# */ {
 });
 
 /**
- * Implementation of the ``char`` Hexya field type:
+ * Implementation of the ``char`` Doxa field type:
  *
  * * Default operator is ``ilike`` rather than ``=``
  *
@@ -373,7 +373,7 @@ var DateField = Field.extend(/** @lends instance.web.search.DateField# */{
 });
 
 /**
- * Implementation of the ``datetime`` hexyaerp field type:
+ * Implementation of the ``datetime`` doxaerp field type:
  *
  * * Uses the same widget as the ``date`` field type (a simple date)
  *
@@ -576,7 +576,7 @@ var FilterGroup = Input.extend(/** @lends instance.web.search.FilterGroup# */{
     /**
      * Fetches contexts for all enabled filters in the group
      *
-     * @param {hexyaerp.web.search.Facet} facet
+     * @param {doxaerp.web.search.Facet} facet
      * @return {*} combined contexts of the enabled filters in this group
      */
     get_context: function (facet) {
@@ -708,7 +708,7 @@ var GroupbyGroup = FilterGroup.extend({
 var Filter = Input.extend(/** @lends instance.web.search.Filter# */{
     template: 'SearchView.filter',
     /**
-     * Implementation of the Hexya filters (button with a context and/or
+     * Implementation of the Doxa filters (button with a context and/or
      * a domain sent as-is to the search view)
      *
      * Filters are only attributes holder, the actual work (compositing

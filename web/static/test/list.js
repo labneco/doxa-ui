@@ -1,4 +1,4 @@
-hexya.define_section('list.buttons', ['web.ListView', 'web.data', 'web.data_manager'], function (test, mock) {
+doxa.define_section('list.buttons', ['web.ListView', 'web.data', 'web.data_manager'], function (test, mock) {
 
     test('record-deletion', function (assert, ListView, data, data_manager) {
         assert.expect(2);
@@ -31,7 +31,7 @@ hexya.define_section('list.buttons', ['web.ListView', 'web.data', 'web.data_mana
             arch: '<tree><field name="a"/><button type="object" name="foo"/></tree>',
         });
         var list = new ListView({
-            do_action: hexya.testing.noop
+            do_action: doxa.testing.noop
         }, ds, fields_view, {editable: 'top'});
 
         var $fix = $( "#qunit-fixture");

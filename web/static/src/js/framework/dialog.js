@@ -1,4 +1,4 @@
-hexya.define('web.Dialog', function (require) {
+doxa.define('web.Dialog', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -34,7 +34,7 @@ var Dialog = Widget.extend({
         this._opened = $.Deferred();
 
         options = _.defaults(options || {}, {
-            title: _t('Hexya'), subtitle: '',
+            title: _t('Doxa'), subtitle: '',
             size: 'large',
             dialogClass: '',
             $content: false,

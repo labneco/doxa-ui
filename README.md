@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/hexya-erp/hexya-base.svg?branch=master)](https://travis-ci.org/hexya-erp/hexya-base)
-[![Go Report Card](https://goreportcard.com/badge/hexya-erp/hexya-base)](https://goreportcard.com/report/hexya-erp/hexya-base)
+[![Build Status](https://travis-ci.org/labneco/doxa-ui.svg?branch=master)](https://travis-ci.org/labneco/doxa-ui)
+[![Go Report Card](https://goreportcard.com/badge/labneco/doxa-ui)](https://goreportcard.com/report/labneco/doxa-ui)
 
-Hexya BASE ADDONS
+Doxa BASE ADDONS
 ===============
-Hexya is an open source ERP and a business application development framework
+Doxa is an open source ERP and a business application development framework
 written in Go.
 
-This repository holds modules the base modules for Hexya.
+This repository holds modules the base modules for Doxa.

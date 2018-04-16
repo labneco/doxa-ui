@@ -1,4 +1,4 @@
-hexya.define('web.ChangePassword', function (require) {
+doxa.define('web.ChangePassword', function (require) {
 "use strict";
 
 var core = require('web.core');

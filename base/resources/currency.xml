@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <view id="base_view_currency_rate_search" model="CurrencyRate">
@@ -102,4 +102,4 @@
         </action>
 
     </data>
-</hexya>
+</doxa>

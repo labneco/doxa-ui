@@ -1,10 +1,10 @@
 /*---------------------------------------------------------
- * Hexya Web Boostrap Code
+ * Doxa Web Boostrap Code
  *---------------------------------------------------------*/
 
 /**
- * @name hexyaerp
- * @namespace hexyaerp
+ * @name doxaerp
+ * @namespace doxaerp
  *
  * Each module can return a deferred. In that case, the module is marked as loaded
  * only when the deferred is resolved, and its value is equal to the resolved value.
@@ -43,8 +43,8 @@
 
     var debug = ($.deparam($.param.querystring()).debug !== undefined);
 
-    var hexya = window.hexya = window.hexya || {};
-    _.extend(hexya, {
+    var doxa = window.doxa = window.doxa || {};
+    _.extend(doxa, {
         testing: typeof QUnit === "object",
         debug: debug,
         remaining_jobs: jobs,
@@ -105,7 +105,7 @@
                     });
             }
 
-            if (hexya.debug) {
+            if (doxa.debug) {
                 if (!(deps instanceof Array)) {
                     throw new Error ('Dependencies should be defined by an array', deps);
                 }
@@ -147,7 +147,7 @@
                 for (var k=0; k<jobs.length; k++) {
                     debug_jobs[jobs[k].name] = job = {
                         dependencies: jobs[k].deps,
-                        dependents: hexya.__DEBUG__.get_dependents(jobs[k].name),
+                        dependents: doxa.__DEBUG__.get_dependents(jobs[k].name),
                         name: jobs[k].name
                     };
                     if (jobs[k].error) {
@@ -157,7 +157,7 @@
                         job.rejected = jobs[k].rejected;
                         rejected.push(job.name);
                     }
-                    var deps = hexya.__DEBUG__.get_dependencies( job.name );
+                    var deps = doxa.__DEBUG__.get_dependencies( job.name );
                     for (var i=0; i<deps.length; i++) {
                         if (job.name !== deps[i] && !(deps[i] in services)) {
                             jobdep = debug_jobs[deps[i]] || (deps[i] in factories && _.find(jobs, function (job) { return job.name === deps[i];}));
@@ -176,8 +176,8 @@
                         }
                     }
                 }
-                var missing = hexya.__DEBUG__.get_missing_jobs();
-                var failed = hexya.__DEBUG__.get_failed_jobs();
+                var missing = doxa.__DEBUG__.get_missing_jobs();
+                var failed = doxa.__DEBUG__.get_failed_jobs();
                 var unloaded = _.filter(debug_jobs, function (job) { return job.missing; });
 
                 var log = [(_.isEmpty(failed) ? (_.isEmpty(unloaded) ? 'info' : 'warning' ) : 'error') + ':', 'Some modules could not be started'];
@@ -186,9 +186,9 @@
                 if (!_.isEmpty(rejected))       log.push('\nRejected modules:       ', rejected);
                 if (!_.isEmpty(rejected_linked))log.push('\nRejected linked modules:', rejected_linked);
                 if (!_.isEmpty(unloaded))       log.push('\nNon loaded modules:     ', _.pluck(unloaded, 'name'));
-                if (hexya.debug && !_.isEmpty(debug_jobs)) log.push('\nDebug:                  ', debug_jobs);
+                if (doxa.debug && !_.isEmpty(debug_jobs)) log.push('\nDebug:                  ', debug_jobs);
 
-                if (hexya.debug || !_.isEmpty(failed) || !_.isEmpty(unloaded)) {
+                if (doxa.debug || !_.isEmpty(failed) || !_.isEmpty(unloaded)) {
                     console[_.isEmpty(failed) || _.isEmpty(unloaded) ? 'info' : 'error'].apply(console, log);
                 }
             }
@@ -214,7 +214,7 @@
                         function (data) {
                             services[job.name] = data;
                             def.resolve();
-                            hexya.process_jobs(jobs, services);
+                            doxa.process_jobs(jobs, services);
                         }, function (e) {
                             job.rejected = e || true;
                             jobs.push(job);
@@ -258,7 +258,7 @@
             var len = job_deferred.length;
             $.when.apply($, job_deferred).then(function () {
                 if (len === job_deferred.length) {
-                    hexya.log();
+                    doxa.log();
                 } else {
                     log_when_loaded();
                 }

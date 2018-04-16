@@ -661,7 +661,7 @@ msgid "Groups"
 msgstr ""
 
 #. help:Sequence.Padding
-msgid "Hexya will automatically adds some '0' on the left of the 'Next Number' to get the required padding size."
+msgid "Doxa will automatically adds some '0' on the left of the 'Next Number' to get the required padding size."
 msgstr ""
 
 #. resource:base_view_attachment_form
@@ -1536,7 +1536,7 @@ msgid "You can not change the company as the partner/user has multiple users lin
 msgstr ""
 
 #. code:
-msgid "You can not remove the admin user as it is used internally for resources created by Hexya"
+msgid "You can not remove the admin user as it is used internally for resources created by Doxa"
 msgstr ""
 
 #. help:Country.AddressFormat
@@ -1584,12 +1584,12 @@ msgid "e.g. Sales Director"
 msgstr ""
 
 #. resource:base_view_partner_address_form
-msgid "e.g. www.hexya.io"
+msgid "e.g. www.doxa.io"
 msgstr ""
 
 #. resource:base_view_company_form
 #. resource:base_view_partner_form
-msgid "e.g. www.hexya.io"
+msgid "e.g. www.doxa.io"
 msgstr ""
 
 #. resource:base_view_partner_form

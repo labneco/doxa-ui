@@ -1,4 +1,4 @@
-hexya.define('web.DebugManager', function (require) {
+doxa.define('web.DebugManager', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');

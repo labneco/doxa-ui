@@ -1,4 +1,4 @@
-hexya.define('web.search_filters', function (require) {
+doxa.define('web.search_filters', function (require) {
 "use strict";
 
 var core = require('web.core');

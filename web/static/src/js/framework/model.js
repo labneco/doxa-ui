@@ -1,4 +1,4 @@
-hexya.define('web.Model', function (require) {
+doxa.define('web.Model', function (require) {
 "use strict";
 
 var Class = require('web.Class');
@@ -6,12 +6,12 @@ var session = require('web.session');
 
 var Model = Class.extend({
     /**
-    new hexyaerp.web.Model(name[, context[, domain]])
+    new doxaerp.web.Model(name[, context[, domain]])
 
     @constructs instance.web.Model
     @extends instance.web.Class
 
-    @param {String} name name of the Hexya model this object is bound to
+    @param {String} name name of the Doxa model this object is bound to
     @param {Object} [context]
     @param {Array} [domain]
     */
@@ -30,7 +30,7 @@ var Model = Class.extend({
         };
     },
     /**
-     * Call a method (over RPC) on the bound Hexya model.
+     * Call a method (over RPC) on the bound Doxa model.
      *
      * @param {String} method name of the method to call
      * @param {Array} [args] positional arguments
@@ -55,7 +55,7 @@ var Model = Class.extend({
         }, options);
     },
     /**
-     * Executes a signal on the designated workflow, on the bound Hexya model
+     * Executes a signal on the designated workflow, on the bound Doxa model
      *
      * @param {Number} id workflow identifier
      * @param {String} signal signal to trigger on the workflow

@@ -1,7 +1,7 @@
-hexya.define('web.PivotView', function (require) {
+doxa.define('web.PivotView', function (require) {
 "use strict";
 /*---------------------------------------------------------
- * Hexya Pivot Table view
+ * Doxa Pivot Table view
  *---------------------------------------------------------*/
 
 var core = require('web.core');

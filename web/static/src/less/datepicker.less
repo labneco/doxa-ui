@@ -1,5 +1,5 @@
-@hexya-datepicker-week-color: #8f8f8f;
-@hexya-datepicker-week-bg-color: lighten(@hexya-datepicker-week-color, 30%);
+@doxa-datepicker-week-color: #8f8f8f;
+@doxa-datepicker-week-bg-color: lighten(@doxa-datepicker-week-color, 30%);
 
 .o_datepicker {
     position: relative;
@@ -21,19 +21,19 @@
     .table-condensed {
         > thead {
             color: white;
-            background-color: @hexya-brand-primary;
+            background-color: @doxa-brand-primary;
 
             > tr {
                 &:first-child {
                     th:hover {
                         color: white;
-                        background-color: darken(@hexya-brand-primary, 10%);
+                        background-color: darken(@doxa-brand-primary, 10%);
                     }
                 }
 
                 &:last-child {
-                    color: @hexya-datepicker-week-color;
-                    background-color: @hexya-datepicker-week-bg-color;
+                    color: @doxa-datepicker-week-color;
+                    background-color: @doxa-datepicker-week-bg-color;
                 }
                 > th {
                     border-radius: 0;
@@ -45,12 +45,12 @@
             > tr {
                 > td {
                     &.active, .active {
-                        background-color: @hexya-brand-optional;
+                        background-color: @doxa-brand-optional;
                         border-radius: 100px;
                     }
 
                     &.today:before {
-                        border-bottom-color: @hexya-brand-optional;
+                        border-bottom-color: @doxa-brand-optional;
                     }
                 }
             }

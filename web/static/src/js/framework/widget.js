@@ -1,4 +1,4 @@
-hexya.define('web.Widget', function (require) {
+doxa.define('web.Widget', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -22,7 +22,7 @@ var mixins = core.mixins;
  *
  * Here is a sample child class:
  *
- * MyWidget = hexyaerp.base.Widget.extend({
+ * MyWidget = doxaerp.base.Widget.extend({
  *     // the name of the QWeb template to use for rendering
  *     template: "MyQWebTemplate",
  *
@@ -75,9 +75,9 @@ var Widget = core.Class.extend(mixins.PropertiesMixin, {
     /**
      * Constructs the widget and sets its parent if a parent is given.
      *
-     * @constructs hexyaerp.Widget
+     * @constructs doxaerp.Widget
      *
-     * @param {hexyaerp.Widget} parent Binds the current instance to the given Widget instance.
+     * @param {doxaerp.Widget} parent Binds the current instance to the given Widget instance.
      * When that widget is destroyed by calling destroy(), the current instance will be
      * destroyed too. Can be null.
      */
@@ -380,7 +380,7 @@ var Widget = core.Class.extend(mixins.PropertiesMixin, {
      *
      * Other methods will fix the bound method to what it is when creating the
      * binding/proxy, which is fine in most javascript code but problematic in
-     * Hexya Web where developers may want to replace existing callbacks with
+     * Doxa Web where developers may want to replace existing callbacks with
      * theirs.
      *
      * The semantics of this precisely replace closing over the method call.

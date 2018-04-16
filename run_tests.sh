@@ -5,7 +5,7 @@ for module_dir in */; do
     echo ""
     echo "############# TESTING $module_dir ###############"
     echo ">>>> Generating pool"
-    hexya generate -t ./$module_dir
+    doxa generate -t ./$module_dir
     retVal=$?
     let "retStatus=retStatus + $retVal"
     if (( $retVal > 0 )); then

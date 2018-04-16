@@ -1,4 +1,4 @@
-hexya.define('web.UserMenu', function (require) {
+doxa.define('web.UserMenu', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -41,10 +41,10 @@ var UserMenu = Widget.extend({
         $avatar.attr('src', avatar_src);
     },
     on_menu_documentation: function () {
-        window.open('https://hexya.io/documentation/user', '_blank');
+        window.open('https://doxa.io/documentation/user', '_blank');
     },
     on_menu_support: function () {
-        window.open('https://hexya.io/buy', '_blank');
+        window.open('https://doxa.io/buy', '_blank');
     },
     on_menu_settings: function() {
         var self = this;
@@ -72,10 +72,10 @@ var UserMenu = Widget.extend({
                         state: JSON.stringify(state),
                         scope: 'userinfo',
                     };
-                    framework.redirect('https://accounts.hexya.com/oauth2/auth?'+$.param(params));
+                    framework.redirect('https://accounts.doxa.com/oauth2/auth?'+$.param(params));
                 }).fail(function(result, ev){
                     ev.preventDefault();
-                    framework.redirect('https://accounts.hexya.com/account');
+                    framework.redirect('https://accounts.doxa.com/account');
                 });
             },
         });

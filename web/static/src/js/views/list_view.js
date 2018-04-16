@@ -1,5 +1,5 @@
 
-hexya.define('web.ListView', function (require) {
+doxa.define('web.ListView', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -61,7 +61,7 @@ var ListView = View.extend({
         'click thead th.o_column_sortable[data-id]': 'sort_by_column',
         'click .oe_view_nocontent': function() {
             if (this.$buttons) {
-                this.$buttons.width(this.$buttons.width() + 1).hexyaerpBounce();
+                this.$buttons.width(this.$buttons.width() + 1).doxaerpBounce();
             }
         },
     },

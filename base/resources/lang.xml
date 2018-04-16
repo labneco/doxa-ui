@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <view id="base_res_lang_tree" model="Lang">
@@ -95,4 +95,4 @@
                   groups="base_group_no_one" sequence="1"/>
 
     </data>
-</hexya>
+</doxa>

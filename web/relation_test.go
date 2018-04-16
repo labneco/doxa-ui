@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hexya-erp/hexya-base/web/controllers"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa-ui/web/controllers"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

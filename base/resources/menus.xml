@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <!-- Top menu item -->
@@ -25,4 +25,4 @@
         <menuitem id="base_menu_database_structure" name="Database Structure" parent="base_menu_custom"/>
 
     </data>
-</hexya>
+</doxa>

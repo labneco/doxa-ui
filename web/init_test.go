@@ -6,7 +6,7 @@ package web
 import (
 	"testing"
 
-	"github.com/hexya-erp/hexya/hexya/tests"
+	"github.com/labneco/doxa/doxa/tests"
 )
 
 func TestMain(m *testing.M) {

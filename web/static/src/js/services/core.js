@@ -1,4 +1,4 @@
-hexya.define('web.core', function (require) {
+doxa.define('web.core', function (require) {
 "use strict";
 
 var Bus = require('web.Bus');
@@ -47,7 +47,7 @@ return {
     search_widgets_registry: new Registry(),
     view_registry: new Registry(),
 
-    csrf_token: hexya.csrf_token,
+    csrf_token: doxa.csrf_token,
 };
 
 });

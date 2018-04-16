@@ -12,9 +12,9 @@ import (
 	"strings"
 	"testing"
 
-	_ "github.com/hexya-erp/hexya-base/web/controllers"
-	"github.com/hexya-erp/hexya/hexya/controllers"
-	"github.com/hexya-erp/hexya/hexya/server"
+	_ "github.com/labneco/doxa-ui/web/controllers"
+	"github.com/labneco/doxa/doxa/controllers"
+	"github.com/labneco/doxa/doxa/server"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -26,7 +26,7 @@ func login() *http.Cookie {
 	w := httptest.NewRecorder()
 	server.GetServer().ServeHTTP(w, req)
 	for _, c := range w.Result().Cookies() {
-		if c.Name == "hexya-session" {
+		if c.Name == "doxa-session" {
 			return c
 		}
 	}

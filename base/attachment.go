@@ -14,13 +14,13 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/hexya-erp/hexya/hexya/actions"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/tools/strutils"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa/doxa/actions"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/tools/strutils"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 	"github.com/spf13/viper"
 )
 

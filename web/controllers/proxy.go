@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/hexya-erp/hexya/hexya/server"
+	"github.com/labneco/doxa/doxa/server"
 )
 
 // Load executes a GET request and returns the values

@@ -4,9 +4,9 @@
 package base
 
 import (
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/pool/h"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/pool/h"
 )
 
 func init() {
@@ -55,7 +55,7 @@ gap in the sequence (while they are possible in the former).`},
 			Default: models.DefaultValue(1), Help: "The next number of the sequence will be incremented by this number"},
 		"Padding": models.IntegerField{String: "Sequence Size", Required: true,
 			Default: models.DefaultValue(0),
-			Help:    "Hexya will automatically adds some '0' on the left of the 'Next Number' to get the required padding size."},
+			Help:    "Doxa will automatically adds some '0' on the left of the 'Next Number' to get the required padding size."},
 		"Company": models.Many2OneField{RelationModel: h.Company(), Default: func(env models.Environment) interface{} {
 			return h.Company().NewSet(env).CompanyDefaultGet()
 		}},

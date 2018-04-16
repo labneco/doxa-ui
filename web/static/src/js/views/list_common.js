@@ -1,4 +1,4 @@
-hexya.define('web.list_common', function (require) {
+doxa.define('web.list_common', function (require) {
 "use strict";
 
 var core = require('web.core');

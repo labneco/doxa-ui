@@ -1,4 +1,4 @@
-hexya.define('web.AbstractWebClient', function (require) {
+doxa.define('web.AbstractWebClient', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');
@@ -51,7 +51,7 @@ var WebClient = Widget.extend({
         this._current_state = null;
         this.menu_dm = new utils.DropMisordered();
         this.action_mutex = new utils.Mutex();
-        this.set('title_part', {"zhexyaerp": "Hexya"});
+        this.set('title_part', {"zdoxaerp": "Doxa"});
     },
     start: function() {
         var self = this;

@@ -1,4 +1,4 @@
-hexya.define('web.CrashManager', function (require) {
+doxa.define('web.CrashManager', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');
@@ -54,8 +54,8 @@ var CrashManager = core.Class.extend({
             new (handler)(this, error).display();
             return;
         }
-        if (error.data.name === "hexyaerp.http.SessionExpiredException" || error.data.name === "werkzeug.exceptions.Forbidden") {
-            this.show_warning({type: "Session Expired", data: { message: _t("Your Hexya session expired. Please refresh the current web page.") }});
+        if (error.data.name === "doxaerp.http.SessionExpiredException" || error.data.name === "werkzeug.exceptions.Forbidden") {
+            this.show_warning({type: "Session Expired", data: { message: _t("Your Doxa session expired. Please refresh the current web page.") }});
             return;
         }
         if (_.has(map_title, error.data.exception_type)) {
@@ -105,7 +105,7 @@ var CrashManager = core.Class.extend({
         }
         new Dialog(this, {
             size: 'medium',
-            title: "Hexya " + (_.str.capitalize(error.type) || _t("Warning")),
+            title: "Doxa " + (_.str.capitalize(error.type) || _t("Warning")),
             subtitle: error.data.title,
             $content: $('<div>').html(QWeb.render('CrashManager.warning', {error: error}))
         }).open();
@@ -115,7 +115,7 @@ var CrashManager = core.Class.extend({
             return;
         }
         new Dialog(this, {
-            title: "Hexya " + _.str.capitalize(error.type),
+            title: "Doxa " + _.str.capitalize(error.type),
             $content: QWeb.render('CrashManager.error', {error: error})
         }).open();
     },
@@ -162,7 +162,7 @@ var RedirectWarningHandler = Dialog.extend(ExceptionHandler, {
 
         new Dialog(this, {
             size: 'medium',
-            title: "Hexya " + (_.str.capitalize(error.type) || "Warning"),
+            title: "Doxa " + (_.str.capitalize(error.type) || "Warning"),
             buttons: [
                 {text: error.data.arguments[2], classes : "btn-primary", click: function() {
                     window.location.href = '#action='+error.data.arguments[1];
@@ -175,7 +175,7 @@ var RedirectWarningHandler = Dialog.extend(ExceptionHandler, {
     }
 });
 
-core.crash_registry.add('hexya.exceptions.RedirectWarning', RedirectWarningHandler);
+core.crash_registry.add('doxa.exceptions.RedirectWarning', RedirectWarningHandler);
 
 return CrashManager;
 });

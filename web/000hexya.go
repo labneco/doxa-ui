@@ -16,11 +16,11 @@ package web
 
 import (
 	// Loading dependencies as blank imports
-	_ "github.com/hexya-erp/hexya-base/base"
+	_ "github.com/labneco/doxa-ui/base"
 	// Loading controllers package
-	_ "github.com/hexya-erp/hexya-base/web/controllers"
-	"github.com/hexya-erp/hexya/hexya/server"
-	"github.com/hexya-erp/hexya/hexya/tools/logging"
+	_ "github.com/labneco/doxa-ui/web/controllers"
+	"github.com/labneco/doxa/doxa/server"
+	"github.com/labneco/doxa/doxa/tools/logging"
 )
 
 const (

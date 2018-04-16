@@ -1,5 +1,5 @@
 
-hexya.define('web.translation', function (require) {
+doxa.define('web.translation', function (require) {
 "use strict";
 
 var Class = require('web.Class');
@@ -50,9 +50,9 @@ var TranslationDataBase = Class.extend(/** @lends instance.TranslationDataBase# 
         return this.db[key];
     },
     /**
-        Loads the translations from an Hexya server.
+        Loads the translations from an Doxa server.
 
-        @param {hexyaerp.Session} session The session object to contact the server.
+        @param {doxaerp.Session} session The session object to contact the server.
         @param {Array} [modules] The list of modules to load the translation. If not specified,
         it will default to all the modules installed in the current database.
         @param {Object} [lang] lang The language. If not specified it will default to the language
@@ -77,7 +77,7 @@ var _t = new TranslationDataBase().build_translation_function();
  *
  * Useful when defining translatable strings in code evaluated before the
  * translation database is loaded, as class attributes or at the top-level of
- * an Hexya Web module
+ * an Doxa Web module
  *
  * @param {String} s string to translate
  * @returns {Object} lazy translation object

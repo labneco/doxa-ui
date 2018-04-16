@@ -1,4 +1,4 @@
-hexya.define('web.DataExport', function (require) {
+doxa.define('web.DataExport', function (require) {
 "use strict";
 
 var core = require('web.core');

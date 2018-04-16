@@ -9,15 +9,15 @@ import (
 	"path/filepath"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hexya-erp/hexya/hexya/controllers"
-	"github.com/hexya-erp/hexya/hexya/menus"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/server"
-	"github.com/hexya-erp/hexya/hexya/tools/generate"
-	"github.com/hexya-erp/hexya/hexya/tools/logging"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa/doxa/controllers"
+	"github.com/labneco/doxa/doxa/menus"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/server"
+	"github.com/labneco/doxa/doxa/tools/generate"
+	"github.com/labneco/doxa/doxa/tools/logging"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 )
 
 const (
@@ -333,7 +333,7 @@ func initRoutes() {
 		assets.AddController(http.MethodGet, "/frontend.css", AssetsFrontendCSS)
 	}
 
-	root.AddStatic("/static", filepath.Join(generate.HexyaDir, "hexya", "server", "static"))
+	root.AddStatic("/static", filepath.Join(generate.DoxaDir, "doxa", "server", "static"))
 	web := root.AddGroup("/web")
 	{
 		web.AddMiddleWare(LoginRequired)

@@ -1,4 +1,4 @@
-hexya.define('web.Registry', function (require) {
+doxa.define('web.Registry', function (require) {
 "use strict";
 
 var Class = require('web.Class');

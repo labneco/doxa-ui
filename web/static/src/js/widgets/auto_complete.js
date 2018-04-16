@@ -1,4 +1,4 @@
-hexya.define('web.AutoComplete', function (require) {
+doxa.define('web.AutoComplete', function (require) {
 "use strict";
 
 var Widget = require('web.Widget');

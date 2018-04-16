@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <!--<report id="preview_rml_report" model="res.company" name="preview.report" menu="False"-->
@@ -36,7 +36,7 @@
                                                options='{"no_open": True}'
                                                on_change="on_change_country(country_id)"/>
                                     </div>
-                                    <field name="website" widget="url" placeholder="e.g. www.hexya.io"/>
+                                    <field name="website" widget="url" placeholder="e.g. www.doxa.io"/>
                                 </group>
                                 <group>
                                     <field name="phone"/>
@@ -75,7 +75,7 @@
 
         <action id="base_action_res_company_form" type="ir.actions.act_window" model="Company" view_mode="tree,form"
                 name="Companies">
-            <help>Create and manage the companies that will be managed by Hexya from here. Shops or
+            <help>Create and manage the companies that will be managed by Doxa from here. Shops or
                 subsidiaries can be created and maintained from here.
             </help>
         </action>
@@ -84,4 +84,4 @@
                   groups="base_group_light_multi_company"/>
 
     </data>
-</hexya>
+</doxa>

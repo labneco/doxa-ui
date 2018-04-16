@@ -1,4 +1,4 @@
-hexya.define('web.pyeval', function (require) {
+doxa.define('web.pyeval', function (require) {
 "use strict";
 
 var core = require('web.core');

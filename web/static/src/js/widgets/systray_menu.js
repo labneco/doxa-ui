@@ -1,4 +1,4 @@
-hexya.define('web.SystrayMenu', function (require) {
+doxa.define('web.SystrayMenu', function (require) {
 "use strict";
 
 var Widget = require('web.Widget');

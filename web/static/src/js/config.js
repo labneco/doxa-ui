@@ -1,4 +1,4 @@
-hexya.define('web.config', function (require) {
+doxa.define('web.config', function (require) {
 "use strict";
 
 var bus = require('web.core').bus;

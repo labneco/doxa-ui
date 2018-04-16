@@ -1,4 +1,4 @@
-hexya.define_section('web.registry', ['web.Registry'], {
+doxa.define_section('web.registry', ['web.Registry'], {
     beforeEach: function () {
         this.Foo = {bar: 1};
         this.Bar = {foo: 0};

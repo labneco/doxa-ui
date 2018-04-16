@@ -6,10 +6,10 @@ package controllers
 import (
 	"fmt"
 
-	"github.com/hexya-erp/hexya-base/web/domains"
-	"github.com/hexya-erp/hexya-base/web/odooproxy"
-	"github.com/hexya-erp/hexya-base/web/webdata"
-	"github.com/hexya-erp/hexya/hexya/models"
+	"github.com/labneco/doxa-ui/web/domains"
+	"github.com/labneco/doxa-ui/web/odooproxy"
+	"github.com/labneco/doxa-ui/web/webdata"
+	"github.com/labneco/doxa/doxa/models"
 )
 
 // MethodAdapters is a map giving the adapter to call for each method
@@ -24,7 +24,7 @@ var MethodAdapters = map[string]methodAdapter{
 }
 
 // A methodAdapter can modify calls made by the odoo client
-// to match the expected arguments of the Hexya ORM. Similarly
+// to match the expected arguments of the Doxa ORM. Similarly
 // it can modify the returned values so that they are understood by the client
 type methodAdapter func(*models.RecordCollection, string, []interface{}) interface{}
 

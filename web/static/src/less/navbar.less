@@ -1,18 +1,18 @@
 
 .o_main_navbar {
-    height: @hexya-navbar-height;
-    border: 1px solid @hexya-navbar-inverse-link-hover-bg;
-    background-color: @hexya-brand-primary;
+    height: @doxa-navbar-height;
+    border: 1px solid @doxa-navbar-inverse-link-hover-bg;
+    background-color: @doxa-brand-primary;
     color: white;
-    .box-shadow(0px 0px 8px @hexya-main-text-color);
+    .box-shadow(0px 0px 8px @doxa-main-text-color);
 
     > a, > button {
         float: left;
-        width: @hexya-navbar-height - 2;
-        height: @hexya-navbar-height - 2;
+        width: @doxa-navbar-height - 2;
+        height: @doxa-navbar-height - 2;
         border: none;
         padding: 0;
-        line-height: @hexya-navbar-height - 2;
+        line-height: @doxa-navbar-height - 2;
         background-color: transparent;
         text-align: center;
         color: inherit;
@@ -21,7 +21,7 @@
         .user-select(none);
 
         &:hover, &:focus {
-            background-color: @hexya-navbar-inverse-link-hover-bg;
+            background-color: @doxa-navbar-inverse-link-hover-bg;
             color: inherit;
         }
         &:focus, &:active, &:focus:active {
@@ -47,13 +47,13 @@
 
             > a {
                 display: block;
-                height: @hexya-navbar-height - 2;
+                height: @doxa-navbar-height - 2;
                 padding: 0 10px;
                 color: white;
-                line-height: @hexya-navbar-height - 2;
+                line-height: @doxa-navbar-height - 2;
 
                 &:hover {
-                    background-color: @hexya-navbar-inverse-link-hover-bg;
+                    background-color: @doxa-navbar-inverse-link-hover-bg;
                 }
 
                 &:focus, &:active, &:focus:active {
@@ -82,7 +82,7 @@
 
         .o-menu-indentation(@index) when (@index < 6) {
             > li.o_menu_header_lvl_@{index}, > li .o_menu_entry_lvl_@{index} {
-                padding-left: @hexya-dropdown-hpadding + (@index - 2)*12px;
+                padding-left: @doxa-dropdown-hpadding + (@index - 2)*12px;
             }
             .o-menu-indentation(@index + 1);
         }
@@ -93,7 +93,7 @@
         .o-transition(height, 200ms, linear);
 
         position: relative;
-        height: @hexya-navbar-height;
+        height: @doxa-navbar-height;
         overflow: hidden;
 
         > ul {
@@ -127,15 +127,15 @@
             }
 
             &.o_menu_systray {
-                .o-position-absolute(0px, @hexya-navbar-height - 2, auto, @hexya-navbar-height - 2);
-                height: @hexya-navbar-height - 2;
+                .o-position-absolute(0px, @doxa-navbar-height - 2, auto, @doxa-navbar-height - 2);
+                height: @doxa-navbar-height - 2;
                 text-align: right;
 
                 > li {
                     display: inline-block;
 
                     &.open .dropdown-menu {
-                        .o-position-absolute(@hexya-navbar-height, 0, 0, 0);
+                        .o-position-absolute(@doxa-navbar-height, 0, 0, 0);
                         position: fixed;
                         width: auto;
                     }

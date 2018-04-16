@@ -1,4 +1,4 @@
-hexya.define('web.Apps', function (require) {
+doxa.define('web.Apps', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -193,7 +193,7 @@ var Apps = Widget.extend({
 
             def.resolve();
         }, function() {
-            self.do_warn(_t('Hexya Apps will be available soon'), _t('Showing locally available modules'), true);
+            self.do_warn(_t('Doxa Apps will be available soon'), _t('Showing locally available modules'), true);
             return session.rpc('/web/action/load', {action_id: self.failback_action_id}).then(function(action) {
                 return self.do_action(action);
             }).always(function () {

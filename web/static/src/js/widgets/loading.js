@@ -1,4 +1,4 @@
-hexya.define('web.Loading', function (require) {
+doxa.define('web.Loading', function (require) {
 "use strict";
 
 var core = require('web.core');

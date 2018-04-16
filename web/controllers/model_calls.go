@@ -19,12 +19,12 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/hexya-erp/hexya-base/web/domains"
-	"github.com/hexya-erp/hexya-base/web/odooproxy"
-	"github.com/hexya-erp/hexya-base/web/webdata"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/tools/logging"
+	"github.com/labneco/doxa-ui/web/domains"
+	"github.com/labneco/doxa-ui/web/odooproxy"
+	"github.com/labneco/doxa-ui/web/webdata"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/tools/logging"
 )
 
 var (

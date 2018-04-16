@@ -1,4 +1,4 @@
-hexya.define('web.SearchView', function (require) {
+doxa.define('web.SearchView', function (require) {
 "use strict";
 
 var AutoComplete = require('web.AutoComplete');
@@ -497,8 +497,8 @@ var SearchView = View.extend({
                 .$el.focus();
     },
     /**
-     * @param {hexyaerp.web.search.SearchQuery | undefined} Undefined if event is change
-     * @param {hexyaerp.web.search.Facet}
+     * @param {doxaerp.web.search.SearchQuery | undefined} Undefined if event is change
+     * @param {doxaerp.web.search.Facet}
      * @param {Object} [options]
      */
     renderFacets: function (collection, model, options) {

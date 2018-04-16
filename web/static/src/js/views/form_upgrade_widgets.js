@@ -1,4 +1,4 @@
-hexya.define('web.form_upgrade_widgets', function (require) {
+doxa.define('web.form_upgrade_widgets', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -49,13 +49,13 @@ var AbstractFieldUpgrade = {
             $content: $('<div>', {
                 html: message,
             }),
-            title: _t("Hexya Enterprise"),
+            title: _t("Doxa Enterprise"),
         }).open();
     },
 
     confirm_upgrade: function() {
         new Model("res.users").call("search_count", [[["share", "=", false]]]).then(function(data) {
-            framework.redirect("https://hexya.io/hexya-enterprise/upgrade?num_users=" + data);
+            framework.redirect("https://doxa.io/doxa-enterprise/upgrade?num_users=" + data);
         });
     },
 

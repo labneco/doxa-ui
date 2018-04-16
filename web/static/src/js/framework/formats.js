@@ -1,4 +1,4 @@
-hexya.define('web.formats', function (require) {
+doxa.define('web.formats', function (require) {
 "use strict";
 
 var translation = require('web.translation');
@@ -10,7 +10,7 @@ var _t = translation._t;
 /**
  * Formats a single atomic value based on a field descriptor
  *
- * @param {Object} value read from Hexya
+ * @param {Object} value read from Doxa
  * @param {Object} descriptor union of orm field and view field
  * @param {Object} [descriptor.widget] widget to use to display the value
  * @param {Object} descriptor.type fallback if no widget is provided, or if the provided widget is unknown

@@ -4,14 +4,14 @@
 package base
 
 import (
-	"github.com/hexya-erp/hexya/hexya/actions"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/operator"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/tools/emailutils"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa/doxa/actions"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/operator"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/tools/emailutils"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 )
 
 // BaseAuthBackend is the authentication backend of the Base module
@@ -267,7 +267,7 @@ a change of password, the user has to login again.`},
 		func(rs h.UserSet) int64 {
 			for _, id := range rs.Ids() {
 				if id == security.SuperUserID {
-					log.Panic(rs.T("You can not remove the admin user as it is used internally for resources created by Hexya"))
+					log.Panic(rs.T("You can not remove the admin user as it is used internally for resources created by Doxa"))
 				}
 			}
 			return rs.Super().Unlink()
@@ -437,7 +437,7 @@ a change of password, the user has to login again.`},
 		})
 
 	userModel.Methods().SyncMemberships().DeclareMethod(
-		`SyncMemberships synchronises the users memberships with the Hexya internal registry`,
+		`SyncMemberships synchronises the users memberships with the Doxa internal registry`,
 		func(rs h.UserSet) {
 			for _, user := range rs.Records() {
 				if user.CheckGroupsSync() {

@@ -5,11 +5,11 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
             <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <title>Hexya</title>
+            <title>Doxa</title>
             <link rel="shortcut icon" href="/static/web/src/img/favicon.ico" type="image/x-icon"/>
 
             <script type="text/javascript">
-                var hexya = {
+                var doxa = {
                     csrf_token: "",
                 };
             </script>
@@ -71,7 +71,7 @@
         {{ end }}
     </div>
     <div class="o_sub_menu_footer">
-        Powered by <a href="http://hexya.io" target="_blank"><span>Hexya</span></a>
+        Powered by <a href="http://doxa.io" target="_blank"><span>Doxa</span></a>
     </div>
 {{ end }}
 
@@ -90,7 +90,7 @@
 
 {{ define "web.webclient_script" }}
     <script type="text/javascript">
-        hexya.define('web.web_client', function (require) {
+        doxa.define('web.web_client', function (require) {
             var WebClient = require('web.WebClient');
             var web_client = new WebClient();
             $(function() {
@@ -108,7 +108,7 @@
 
 {{ define "web.webclient_bootstrap.head" }}
     <script type="text/javascript">
-        hexya.session_info = {{ .SessionInfo }};
+        doxa.session_info = {{ .SessionInfo }};
     </script>
 
         <link rel="stylesheet" href="{{ .CommonCompiledCSS }}"/>
@@ -119,7 +119,7 @@
         <script type="text/javascript" src="{{ . }}"></script>{{ end }}
 
     <script type="text/javascript" charset="utf-8">
-        hexya._modules = {{ .Modules }};
+        doxa._modules = {{ .Modules }};
     </script>
 
     {{ range .BackendJS }}

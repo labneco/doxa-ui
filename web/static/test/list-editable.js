@@ -1,4 +1,4 @@
-hexya.define_section('editor', ['web.ListEditor'], function (test, mock) {
+doxa.define_section('editor', ['web.ListEditor'], function (test, mock) {
 
     function setup() {
         mock.add('test.model:create', function () {
@@ -171,7 +171,7 @@ hexya.define_section('editor', ['web.ListEditor'], function (test, mock) {
     });
 });
 
-hexya.define_section('list.edition', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
+doxa.define_section('list.edition', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
 
     function setup () {
         var records = {};
@@ -254,7 +254,7 @@ hexya.define_section('list.edition', ['web.data', 'web.ListView', 'web.data_mana
     });
 });
 
-hexya.define_section('list.edition.events', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
+doxa.define_section('list.edition.events', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
     function fields_view_get () {
         return {
             type: 'tree',
@@ -334,7 +334,7 @@ hexya.define_section('list.edition.events', ['web.data', 'web.ListView', 'web.da
     });
 });
 
-hexya.define_section('list.edition.onwrite', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
+doxa.define_section('list.edition.onwrite', ['web.data', 'web.ListView', 'web.data_manager'], function (test, mock) {
 
     test('record-to-read', function (assert, data, ListView, data_manager) {
         assert.expect(4);

@@ -1,5 +1,5 @@
 .o_form_view {
-    background-color: @hexya-view-background-color;
+    background-color: @doxa-view-background-color;
 
     // Utility classes (+ oe_edit_only, oe_read_only, o_label_nowrap, o_text_overflow)
     .o_form_invisible, .o_form_field_empty {
@@ -31,12 +31,12 @@
         .o_form_uri { // FIXME maybe global?
             display: inline-block;
 
-            color: @hexya-main-text-color;
+            color: @doxa-main-text-color;
             &:first-line {
                 color: @link-color;
             }
             &:hover {
-                color: darken(@hexya-main-text-color, 1%); // hack required on chrome
+                color: darken(@doxa-main-text-color, 1%); // hack required on chrome
                 &:first-line {
                     color: darken(@link-color, 15%);
                 }
@@ -120,9 +120,9 @@
     // Separators
     .o_horizontal_separator {
         font-size: @font-size-h2;
-        margin: @hexya-form-spacing-unit 0;
+        margin: @doxa-form-spacing-unit 0;
         &:empty {
-            height: @hexya-form-spacing-unit * 2;
+            height: @doxa-form-spacing-unit * 2;
         }
     }
 
@@ -130,7 +130,7 @@
     .o_form_label {
         font-size: @font-size-base; // The label muse have the same size whatever their position
         line-height: @line-height-base;
-        margin-right: @hexya-form-spacing-unit;
+        margin-right: @doxa-form-spacing-unit;
         &.o_form_invalid {
             color: @brand-danger;
         }
@@ -185,7 +185,7 @@
 
     // Boolean
     .o_form_field_boolean {
-        margin: 0 @hexya-form-spacing-unit 0 0;
+        margin: 0 @doxa-form-spacing-unit 0 0;
     }
 
     // Numbers
@@ -248,7 +248,7 @@
             width: 100%;
 
             color: white;
-            background-color: @hexya-brand-optional;
+            background-color: @doxa-brand-optional;
             opacity: 0;
             transition: opacity ease 400ms;
 
@@ -267,7 +267,7 @@
                     margin: 0px;
                     text-align: center;
                     &.o_select_file_button{
-                        background: @hexya-brand-optional;
+                        background: @doxa-brand-optional;
                     }
                     &.o_clear_file_button{
                         background: @brand-danger;
@@ -306,7 +306,7 @@
 
         > tfoot > tr > td {
             padding: 3px;
-            color: @hexya-main-text-color;
+            color: @doxa-main-text-color;
         }
     }
     &.o_form_readonly .o_form_field .o_list_view .o_row_handle {
@@ -319,7 +319,7 @@
             position: relative;
             border-radius: 100%;
             overflow: hidden;
-            background-color: @hexya-brand-optional;
+            background-color: @doxa-brand-optional;
 
             &:after { // Outside pie border to go over border-radius irregularities
                 content: " ";
@@ -334,7 +334,7 @@
                 .o-transform-origin(0);
                 width: 50%;
                 height: 100%;
-                background-color: @hexya-view-background-color;
+                background-color: @doxa-view-background-color;
                 &.o_full {
                     background-color: inherit;
                 }
@@ -348,7 +348,7 @@
                 border-radius: 100%;
 
                 font-weight: 700;
-                color: @hexya-brand-primary;
+                color: @doxa-brand-primary;
             }
         }
     }
@@ -356,9 +356,9 @@
     // Attachments
     .oe_attachment {
         display: inline-block;
-        border: 1px solid @hexya-brand-lightsecondary;
-        margin: 0 @hexya-form-spacing-unit @hexya-form-spacing-unit 0;
-        padding: @hexya-form-spacing-unit;
+        border: 1px solid @doxa-brand-lightsecondary;
+        margin: 0 @doxa-form-spacing-unit @doxa-form-spacing-unit 0;
+        padding: @doxa-form-spacing-unit;
     }
 
     // Specific style classes
@@ -389,7 +389,7 @@
         .oe_subtotal_footer_separator {
             width: 100%;
             text-align: right;
-            border-top: 1px solid @hexya-brand-secondary;
+            border-top: 1px solid @doxa-brand-secondary;
             font-weight: bold;
             font-size: 1.3em;
         }

@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/operator"
-	"github.com/hexya-erp/hexya/hexya/tools/logging"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/operator"
+	"github.com/labneco/doxa/doxa/tools/logging"
 )
 
 // A Domain is a list of search criteria (DomainTerm) in the form of

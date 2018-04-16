@@ -1,4 +1,4 @@
-hexya.define('web.ControlPanelMixin', function (require) {
+doxa.define('web.ControlPanelMixin', function (require) {
 "use strict";
 
 /**
@@ -28,7 +28,7 @@ return ControlPanelMixin;
 
 });
 
-hexya.define('web.ControlPanel', function (require) {
+doxa.define('web.ControlPanel', function (require) {
 "use strict";
 
 var Bus = require('web.Bus');
@@ -93,7 +93,7 @@ var ControlPanel = Widget.extend({
      * precise description)
      * @param {Object} [status.cp_content] dictionnary containing the new ControlPanel jQuery elements
      * @param {Boolean} [status.hidden] true if the ControlPanel should be hidden
-     * @param {hexyaerp.web.SearchView} [status.searchview] the searchview widget
+     * @param {doxaerp.web.SearchView} [status.searchview] the searchview widget
      * @param {Boolean} [status.search_view_hidden] true if the searchview is hidden, false otherwise
      * @param {Boolean} [options.clear] set to true to clear from control panel
      * elements that are not in status.cp_content
@@ -227,7 +227,7 @@ var ControlPanel = Widget.extend({
     /**
      * Private function that updates the SearchView's visibility and extend the
      * breadcrumbs area if the SearchView is not visible
-     * @param {hexyaerp.web.SearchView} [searchview] the searchview Widget
+     * @param {doxaerp.web.SearchView} [searchview] the searchview Widget
      * @param {Boolean} [is_hidden] visibility of the searchview
      */
     _update_search_view: function(searchview, is_hidden) {

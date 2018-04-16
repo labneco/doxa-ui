@@ -1,4 +1,4 @@
-hexya.define('web.datepicker', function (require) {
+doxa.define('web.datepicker', function (require) {
 "use strict";
 
 var core = require('web.core');

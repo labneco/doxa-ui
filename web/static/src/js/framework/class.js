@@ -1,4 +1,4 @@
-hexya.define('web.Class', function () {
+doxa.define('web.Class', function () {
 "use strict";
 /**
  * Improved John Resig's inheritance, based on:
@@ -50,14 +50,14 @@ var initializing = false;
 var fnTest = /xyz/.test(function(){xyz();}) ? /\b_super\b/ : /.*/;
 
 // The web Class implementation (does nothing)
-function HexyaClass(){};
+function DoxaClass(){};
 
 /**
  * Subclass an existing class
  *
  * @param {Object} prop class-level properties (class attributes and instance methods) to set on the new class
  */
-HexyaClass.extend = function() {
+DoxaClass.extend = function() {
     var _super = this.prototype;
     // Support mixins arguments
     var args = _.toArray(arguments);
@@ -97,7 +97,7 @@ HexyaClass.extend = function() {
 
     // The dummy class constructor
     function Class() {
-        if(this.constructor !== HexyaClass){
+        if(this.constructor !== DoxaClass){
             throw new Error("You can only instanciate objects with the 'new' operator");
         }
         // All construction is actually done in the init method
@@ -150,5 +150,5 @@ HexyaClass.extend = function() {
     return Class;
 };
 
-return HexyaClass;
+return DoxaClass;
 });

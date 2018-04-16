@@ -1,4 +1,4 @@
-hexya.define('web.ViewManager', function (require) {
+doxa.define('web.ViewManager', function (require) {
 "use strict";
 
 var ControlPanelMixin = require('web.ControlPanelMixin');

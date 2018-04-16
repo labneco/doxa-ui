@@ -1,4 +1,4 @@
-hexya.define('web.form_widgets', function (require) {
+doxa.define('web.form_widgets', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');
@@ -860,7 +860,7 @@ var TimezoneMismatch = FieldSelection.extend({
         if(this.check_timezone()){
             var options = _.extend({
                 delay: { show: 501, hide: 0 },
-                title: _t("Timezone Mismatch : The timezone of your browser doesn't match the selected one. The time in Hexya is displayed according to your field timezone."),
+                title: _t("Timezone Mismatch : The timezone of your browser doesn't match the selected one. The time in Doxa is displayed according to your field timezone."),
             });
             $('<span/>').addClass('fa fa-exclamation-triangle o_tz_warning').insertAfter(this.$label).tooltip(options);
         }
@@ -1113,7 +1113,7 @@ var FieldBinary = common.AbstractField.extend(common.ReinitializeFieldMixin, {
     on_file_uploaded: function(size, name) {
         if (size === false) {
             this.do_warn(_t("File Upload"), _t("There was a problem while uploading your file"));
-            // TODO: use hexyaerp web crashmanager
+            // TODO: use doxaerp web crashmanager
             console.warn("Error while uploading file : ", name);
         } else {
             this.on_file_uploaded_and_valid.apply(this, arguments);
@@ -1236,7 +1236,7 @@ var FieldBinaryImage = FieldBinary.extend({
         $img.click(function(e) {
             if(self.view.get("actual_mode") == "view") {
                 var $button = $(".o_form_button_edit");
-                $button.hexyaerpBounce();
+                $button.doxaerpBounce();
                 e.stopPropagation();
             }
         });
@@ -1385,7 +1385,7 @@ var FieldStatus = common.AbstractField.extend({
         });
     },
     /*
-     * :deprecated: this feature will probably be removed with Hexya v8
+     * :deprecated: this feature will probably be removed with Doxa v8
      */
     get_distant_fields: function() {
         var self = this;
@@ -1586,7 +1586,7 @@ var AceEditor = common.AbstractField.extend(common.ReinitializeFieldMixin, {
     template: "AceEditor",
     willStart: function() {
         if (!window.ace && !this.loadJS_def) {
-            this.loadJS_def = ajax.loadJS('/static/web/lib/ace/ace.hexya-custom.js').then(function () {
+            this.loadJS_def = ajax.loadJS('/static/web/lib/ace/ace.doxa-custom.js').then(function () {
                 return $.when(ajax.loadJS('/static/web/lib/ace/mode-python.js'),
                     ajax.loadJS('/static/web/lib/ace/mode-xml.js')
                 );
@@ -1678,7 +1678,7 @@ var AceEditor = common.AbstractField.extend(common.ReinitializeFieldMixin, {
  * Registry of form fields, called by :js:`instance.web.FormView`.
  *
  * All referenced classes must implement FieldInterface. Those represent the classes whose instances
- * will substitute to the <field> tags as defined in Hexya's views.
+ * will substitute to the <field> tags as defined in Doxa's views.
  */
 core.form_widget_registry
     .add('char', FieldChar)
@@ -1713,7 +1713,7 @@ core.form_widget_registry
 
 /**
  * Registry of widgets usable in the form view that can substitute to any possible
- * tags defined in Hexya's form views.
+ * tags defined in Doxa's form views.
  *
  * Every referenced class should extend FormWidget.
  */

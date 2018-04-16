@@ -8,13 +8,13 @@ import (
 	"math"
 	"regexp"
 
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/operator"
-	"github.com/hexya-erp/hexya/hexya/models/types"
-	"github.com/hexya-erp/hexya/hexya/models/types/dates"
-	"github.com/hexya-erp/hexya/hexya/tools/nbutils"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/operator"
+	"github.com/labneco/doxa/doxa/models/types"
+	"github.com/labneco/doxa/doxa/models/types/dates"
+	"github.com/labneco/doxa/doxa/tools/nbutils"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 )
 
 const CurrencyDisplayPattern = `(\w+)\s*(?:\((.*)\))?`
@@ -172,7 +172,7 @@ func init() {
 				if symbol == "" {
 					symbol = currency.Name()
 				}
-				formatNumberStr := fmt.Sprintf("hexyaerp.web.format_value(arguments[0], {type: 'float', digits: [69,%d]}, 0.00)", currency.DecimalPlaces())
+				formatNumberStr := fmt.Sprintf("doxaerp.web.format_value(arguments[0], {type: 'float', digits: [69,%d]}, 0.00)", currency.DecimalPlaces())
 				returnStr := fmt.Sprintf("return %s + '\\xA0' + %s;", formatNumberStr, symbol)
 				if currency.Position() == "before" {
 					returnStr = fmt.Sprintf("return %s + '\\xA0' + %s;", symbol, formatNumberStr)

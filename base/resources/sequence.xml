@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <view id="base_sequence_date_range_tree" model="SequenceDateRange">
@@ -101,4 +101,4 @@
         <menuitem action="base_ir_sequence_form" id="base_menu_ir_sequence_form" parent="base_menu_sequences_identifiers" />
 
     </data>
-</hexya>
+</doxa>

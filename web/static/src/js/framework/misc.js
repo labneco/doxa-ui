@@ -1,4 +1,4 @@
-hexya.define('web.framework', function (require) {
+doxa.define('web.framework', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -46,7 +46,7 @@ var Throbber = Widget.extend({
 /** Setup blockui */
 if ($.blockUI) {
     $.blockUI.defaults.baseZ = 1100;
-    $.blockUI.defaults.message = '<div class="hexyaerp oe_blockui_spin_container" style="background-color: transparent;">';
+    $.blockUI.defaults.message = '<div class="doxaerp oe_blockui_spin_container" style="background-color: transparent;">';
     $.blockUI.defaults.css.border = '0';
     $.blockUI.defaults.css["background-color"] = '';
 }
@@ -103,7 +103,7 @@ function redirect (url, wait) {
 
 //  * Client action to reload the whole interface.
 //  * If params.menu_id, it opens the given menu entry.
-//  * If params.wait, reload will wait the hexyaerp server to be reachable before reloading
+//  * If params.wait, reload will wait the doxaerp server to be reachable before reloading
  
 function Reload(parent, action) {
     var params = action.params || {};
@@ -255,17 +255,17 @@ $.fn.getAttributes = function() {
     }
     return o;
 };
-$.fn.hexyaerpClass = function(additionalClass) {
+$.fn.doxaerpClass = function(additionalClass) {
     // This plugin should be applied on top level elements
     additionalClass = additionalClass || '';
     if (!!$.browser.msie) {
-        additionalClass += ' hexyaerp_ie';
+        additionalClass += ' doxaerp_ie';
     }
     return this.each(function() {
-        $(this).addClass('hexyaerp ' + additionalClass);
+        $(this).addClass('doxaerp ' + additionalClass);
     });
 };
-$.fn.hexyaerpBounce = function() {
+$.fn.doxaerpBounce = function() {
     return this.each(function() {
         $(this).css('box-sizing', 'content-box').effect('bounce', {distance: 18, times: 5}, 250);
     });
@@ -397,7 +397,7 @@ return {
 
 });
 
-hexya.define('web.IFrameWidget', function (require) {
+doxa.define('web.IFrameWidget', function (require) {
 "use strict";
 
 var Widget = require('web.Widget');

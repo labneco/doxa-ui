@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <view id="base_ir_filters_view_form" model="Filter">
@@ -61,4 +61,4 @@
                   id="base_menu_ir_filters" action="base_actions_ir_filters_view" sequence="5"/>
 
     </data>
-</hexya>
+</doxa>

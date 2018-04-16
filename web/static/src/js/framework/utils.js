@@ -1,4 +1,4 @@
-hexya.define('web.utils', function (require) {
+doxa.define('web.utils', function (require) {
 "use strict";
 
 var Class = require('web.Class');

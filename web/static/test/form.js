@@ -1,4 +1,4 @@
-hexya.define_section('compute_domain', ['web.data'], function (test) {
+doxa.define_section('compute_domain', ['web.data'], function (test) {
 
     test("basic", function (assert, data) {
         var fields = {

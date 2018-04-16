@@ -8,10 +8,10 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hexya-erp/hexya/hexya/i18n"
-	"github.com/hexya-erp/hexya/hexya/server"
-	"github.com/hexya-erp/hexya/hexya/tools"
-	"github.com/hexya-erp/hexya/hexya/tools/xmlutils"
+	"github.com/labneco/doxa/doxa/i18n"
+	"github.com/labneco/doxa/doxa/server"
+	"github.com/labneco/doxa/doxa/tools"
+	"github.com/labneco/doxa/doxa/tools/xmlutils"
 )
 
 // QWeb returns a concatenation of all client qweb templates

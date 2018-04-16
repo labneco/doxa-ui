@@ -1,4 +1,4 @@
-hexya.define('web.ajax', function (require) {
+doxa.define('web.ajax', function (require) {
 "use strict";
 
 var core = require('web.core');

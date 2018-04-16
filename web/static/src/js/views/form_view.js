@@ -1,4 +1,4 @@
-hexya.define('web.FormView', function (require) {
+doxa.define('web.FormView', function (require) {
 "use strict";
 
 var common = require('web.form_common');
@@ -106,7 +106,7 @@ var FormView = View.extend(common.FieldManagerMixin, {
         // Add bounce effect on button 'Edit' when click on readonly page view.
         this.$(".oe_title,.o_group").on('click', function (e) {
             if(self.get("actual_mode") === "view" && self.$buttons && !$(e.target).is('[data-toggle]')) {
-                self.$buttons.find(".o_form_button_edit").hexyaerpBounce();
+                self.$buttons.find(".o_form_button_edit").doxaerpBounce();
                 core.bus.trigger('click', e);
             }
         });
@@ -932,7 +932,7 @@ var FormView = View.extend(common.FieldManagerMixin, {
             if (this.sidebar) {
                 this.sidebar.do_attachement_update(this.dataset, this.datarecord.id);
             }
-            //hexyaerp.log("The record has been created with id #" + this.datarecord.id);
+            //doxaerp.log("The record has been created with id #" + this.datarecord.id);
             return $.when(this.reload()).then(function () {
                 self.trigger('record_created', r);
                 return _.extend(r, {created: true});
@@ -1218,7 +1218,7 @@ return FormView;
 });
 
 
-hexya.define('web.FormRenderingEngine', function (require) {
+doxa.define('web.FormRenderingEngine', function (require) {
 "use strict";
 
 var common = require('web.form_common');

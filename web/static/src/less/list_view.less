@@ -1,7 +1,7 @@
-@hexya-list-group-header-color: lighten(@hexya-list-grey, 10%);
+@doxa-list-group-header-color: lighten(@doxa-list-grey, 10%);
 .o_list_view {
     cursor: pointer;
-    background-color: @hexya-view-background-color;
+    background-color: @doxa-view-background-color;
     margin-bottom: 0px;
 
     &.table {
@@ -11,7 +11,7 @@
     }
 
     thead {
-        color: @hexya-main-text-color;
+        color: @doxa-main-text-color;
         background-color: #eee;
         border-bottom: 1px solid #cacaca;
         > tr > th {
@@ -24,9 +24,9 @@
 
     tfoot {
         cursor: default;
-        color: @hexya-list-footer-color;
-        background-color: @hexya-list-footer-bg-color;
-        font-weight: @hexya-list-footer-font-weight;
+        color: @doxa-list-footer-color;
+        background-color: @doxa-list-footer-bg-color;
+        font-weight: @doxa-list-footer-font-weight;
         border-top: 2px solid #cacaca;
         border-bottom: 1px solid #cacaca;
     }
@@ -88,9 +88,9 @@
             .user-select(none);
             text-align: right;
             .o_pager_previous, .o_pager_next {
-                background-color: @hexya-list-group-header-color;
+                background-color: @doxa-list-group-header-color;
                 &:hover {
-                    background-color: darken(@hexya-list-group-header-color, 10%);
+                    background-color: darken(@doxa-list-group-header-color, 10%);
                 }
             }
         }

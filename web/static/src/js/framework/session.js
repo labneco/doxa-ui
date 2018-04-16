@@ -1,4 +1,4 @@
-hexya.define('web.Session', function (require) {
+doxa.define('web.Session', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');
@@ -29,7 +29,7 @@ var Session = core.Class.extend(mixins.EventDispatcherMixin, {
     init: function(parent, origin, options) {
         mixins.EventDispatcherMixin.init.call(this, parent);
         options = options || {};
-        this.module_list = (options.modules && options.modules.slice()) || (window.hexya._modules && window.hexya._modules.slice()) || [];
+        this.module_list = (options.modules && options.modules.slice()) || (window.doxa._modules && window.doxa._modules.slice()) || [];
         this.server = null;
         this.session_id = options.session_id || null;
         this.override_session = options.override_session || !!options.session_id || false;
@@ -189,7 +189,7 @@ var Session = core.Class.extend(mixins.EventDispatcherMixin, {
      */
     load_modules: function() {
         var self = this;
-        var modules = hexya._modules;
+        var modules = doxa._modules;
         var all_modules = _.uniq(self.module_list.concat(modules));
         var to_load = _.difference(modules, self.module_list).join(',');
         this.module_list = all_modules;
@@ -245,20 +245,20 @@ var Session = core.Class.extend(mixins.EventDispatcherMixin, {
         return this.qweb_mutex.def;
     },
     on_modules_loaded: function() {
-        var hexyaerp = window.hexyaerp;
+        var doxaerp = window.doxaerp;
         for(var j=0; j<this.module_list.length; j++) {
             var mod = this.module_list[j];
             if(this.module_loaded[mod])
                 continue;
-            hexyaerp[mod] = {};
+            doxaerp[mod] = {};
             // init module mod
-            var fct = hexyaerp._hexyaerp[mod];
+            var fct = doxaerp._doxaerp[mod];
             if(typeof(fct) === "function") {
-                hexyaerp._hexyaerp[mod] = {};
+                doxaerp._doxaerp[mod] = {};
                 for (var k in fct) {
-                    hexyaerp._hexyaerp[mod][k] = fct[k];
+                    doxaerp._doxaerp[mod][k] = fct[k];
                 }
-                fct(hexyaerp, hexyaerp._hexyaerp[mod]);
+                fct(doxaerp, doxaerp._doxaerp[mod]);
             }
             this.module_loaded[mod] = true;
         }
@@ -280,7 +280,7 @@ var Session = core.Class.extend(mixins.EventDispatcherMixin, {
      * @returns {$.Deferred} deferred indicating the session is done reloading
      */
     session_reload: function () {
-        var result = _.extend({}, window.hexya.session_info);
+        var result = _.extend({}, window.doxa.session_info);
         delete result.session_id;
         _.extend(this, result);
         return $.when();
@@ -326,7 +326,7 @@ var Session = core.Class.extend(mixins.EventDispatcherMixin, {
         options = _.clone(options || {});
         var shadow = options.shadow || false;
         options.headers = _.extend({}, options.headers)
-        if (hexya.debug) {
+        if (doxa.debug) {
             options.headers["X-Debug-Mode"] = $.deparam($.param.querystring()).debug;
         }
 

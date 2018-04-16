@@ -9,16 +9,16 @@ import (
 	"strings"
 
 	"github.com/beevik/etree"
-	"github.com/hexya-erp/hexya-base/web/domains"
-	"github.com/hexya-erp/hexya-base/web/webdata"
-	"github.com/hexya-erp/hexya/hexya/actions"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/fieldtype"
-	"github.com/hexya-erp/hexya/hexya/models/security"
-	"github.com/hexya-erp/hexya/hexya/tools/nbutils"
-	"github.com/hexya-erp/hexya/hexya/views"
-	"github.com/hexya-erp/hexya/pool/h"
-	"github.com/hexya-erp/hexya/pool/q"
+	"github.com/labneco/doxa-ui/web/domains"
+	"github.com/labneco/doxa-ui/web/webdata"
+	"github.com/labneco/doxa/doxa/actions"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/fieldtype"
+	"github.com/labneco/doxa/doxa/models/security"
+	"github.com/labneco/doxa/doxa/tools/nbutils"
+	"github.com/labneco/doxa/doxa/views"
+	"github.com/labneco/doxa/pool/h"
+	"github.com/labneco/doxa/pool/q"
 )
 
 func init() {

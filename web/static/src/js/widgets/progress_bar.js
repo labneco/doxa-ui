@@ -1,4 +1,4 @@
-hexya.define('web.ProgressBar', function (require) {
+doxa.define('web.ProgressBar', function (require) {
 "use strict";
 
 var core = require('web.core');

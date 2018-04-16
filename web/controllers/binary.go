@@ -10,13 +10,13 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/hexya-erp/hexya/hexya/server"
-	"github.com/hexya-erp/hexya/hexya/tools/generate"
+	"github.com/labneco/doxa/doxa/server"
+	"github.com/labneco/doxa/doxa/tools/generate"
 )
 
 // CompanyLogo serves the logo of the company
 func CompanyLogo(c *server.Context) {
-	c.File(filepath.Join(generate.HexyaDir, "hexya", "server", "static", "web", "src", "img", "logo.png"))
+	c.File(filepath.Join(generate.DoxaDir, "doxa", "server", "static", "web", "src", "img", "logo.png"))
 }
 
 // Image serves the image stored in the database (base64 encoded)
@@ -32,7 +32,7 @@ func Image(c *server.Context) {
 		return
 	}
 	if img.(string) == "" {
-		c.File(filepath.Join(generate.HexyaDir, "hexya", "server", "static", "web", "src", "img", "placeholder.png"))
+		c.File(filepath.Join(generate.DoxaDir, "doxa", "server", "static", "web", "src", "img", "placeholder.png"))
 		return
 	}
 	res, err := base64.StdEncoding.DecodeString(img.(string))

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hexya>
+<doxa>
     <data>
 
         <!-- change password wizard -->
@@ -145,4 +145,4 @@
                 target="new" view_mode="form" view_id="base_view_users_form_simple_modif"/>
 
     </data>
-</hexya>
+</doxa>

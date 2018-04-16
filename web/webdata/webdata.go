@@ -6,11 +6,11 @@ package webdata
 import (
 	"encoding/json"
 
-	"github.com/hexya-erp/hexya-base/web/domains"
-	"github.com/hexya-erp/hexya/hexya/actions"
-	"github.com/hexya-erp/hexya/hexya/models"
-	"github.com/hexya-erp/hexya/hexya/models/operator"
-	"github.com/hexya-erp/hexya/hexya/views"
+	"github.com/labneco/doxa-ui/web/domains"
+	"github.com/labneco/doxa/doxa/actions"
+	"github.com/labneco/doxa/doxa/models"
+	"github.com/labneco/doxa/doxa/models/operator"
+	"github.com/labneco/doxa/doxa/views"
 )
 
 // FieldsViewGetParams is the args struct for the FieldsViewGet function

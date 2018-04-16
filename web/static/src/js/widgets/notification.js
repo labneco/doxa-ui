@@ -1,4 +1,4 @@
-hexya.define('web.notification', function (require) {
+doxa.define('web.notification', function (require) {
 "use strict";
 
 var core = require('web.core');
